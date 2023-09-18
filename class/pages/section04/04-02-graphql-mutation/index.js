@@ -1,7 +1,17 @@
-import { useMutation } from "@apollo/client"
+import { useMutation, gql } from "@apollo/client"
+
+const myGraphqlSet = gql`
+    mutation {
+        createBoard ( writer : "제임스 후크", title: " 후크가 돌아왔다. 후크 is back!! " , contents: "영국의 신사라면~~~ ") {
+            _id
+            number
+            message
+        }
+    }
+`
 
 export default function GraphqlMutationPage( ) {
-    const [ myFunction ] = useMutation( ) 
+    const [ myFunction ] = useMutation( myGraphqlSet );
 
     const onClickSubmit = async () => {
         const result = await myFunction(); 
