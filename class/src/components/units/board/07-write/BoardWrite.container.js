@@ -33,7 +33,7 @@ export default function BoardWrite () {
     const onChangeWriter = ( event ) => {
         setWriter( event.target.value );
 
-        if( writer && title && contents  ){
+        if( event.target.value && title && contents  ){
             setIsActive( true );
         }
     }
@@ -41,7 +41,7 @@ export default function BoardWrite () {
     const onChangeTitle = ( event ) => {
         setTitle ( event.target.value );
 
-        if( writer && title && contents  ){
+        if( writer && event.target.value && contents  ){
             setIsActive( true );
         }
     }
@@ -49,7 +49,7 @@ export default function BoardWrite () {
     const onChangeContents = ( event ) => {
         setContents ( event.target.value );
 
-        if( writer && title && contents  ){
+        if( writer && title && event.target.value  ){
             setIsActive( true );
         }
     }
