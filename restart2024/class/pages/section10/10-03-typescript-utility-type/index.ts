@@ -50,3 +50,6 @@ let profile: Partial<IProfile> = {
 }
 
 
+// 브랜치 병합 테스트 해보기
+
+
